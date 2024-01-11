@@ -1,12 +1,16 @@
-import { BrowserRouter} from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 import { AppRoutes } from "./routes"
+import { ThemeProvider } from "@emotion/react"
+import { LigthTheme } from "./shared/themes"
 
 export const App = () => {
   return (
-    <BrowserRouter>
+    <ThemeProvider theme={LigthTheme}>
+      <BrowserRouter>
         <AppRoutes></AppRoutes>
-    </BrowserRouter>
-  
+      </BrowserRouter>
+    </ThemeProvider>
+
   )
 }
 
